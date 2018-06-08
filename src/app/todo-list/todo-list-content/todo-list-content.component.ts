@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from './todo.model'
 import { Observable } from 'rxjs/Observable';
+import { DataService } from '../data.service';
+import { Todo } from '../todo.model';
 
 @Component({
   selector: 'app-todo-list-content',
   templateUrl: './todo-list-content.component.html',
   styleUrls: ['./todo-list-content.component.css']
 })
-export class TodoListContentComponent implements OnInit{
+export class TodoListContentComponent implements OnInit{  
   todos: Todo[];
-  
+
+  constructor(public data: DataService) {
+  }
+
   public ngOnInit() {
-    this.todos = [ new Todo("meow"), new Todo("right now", true)];
+    this.todos = this.data.todos;
   }
 }
