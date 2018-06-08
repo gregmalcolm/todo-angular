@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-todo-list-header',
   templateUrl: './todo-list-header.component.html',
   styleUrls: ['./todo-list-header.component.css']
 })
-export class TodoListHeaderComponent implements OnInit {
+export class TodoListHeaderComponent{
+  @Input() todo: "";
 
-  constructor() { }
-
-  ngOnInit() {
+  onEnter(e) {
+    this.todo = "";
   }
-
 }

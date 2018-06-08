@@ -1,3 +1,11 @@
 <section class="main">
-  <todo-list-content works!>
+  <ul *ngFor="let todo of todos" class="todo-list">
+    <li>
+      <div class="view">
+        <input class="toggle" type="checkbox">
+        <label>item</label>
+        <button class="destroy"></button>
+      </div>
+    </li>    
+  </ul>
 </section>
