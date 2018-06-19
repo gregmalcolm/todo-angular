@@ -1,8 +1,11 @@
 <section class="main">
   <ul *ngFor="let todo of todos" class="todo-list">
-    <li>
+    <li [class.completed]="todo.completed">
       <div class="view">
-        <input [(ngModel)]="todo.completed" class="toggle" type="checkbox">
+        <input 
+          [(ngModel)]="todo.completed" 
+          class="toggle" 
+          type="checkbox">
         <label>{{todo.title}}</label>
         <button class="destroy"></button>
       </div>

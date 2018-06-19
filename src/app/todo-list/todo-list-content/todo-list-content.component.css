@@ -69,7 +69,6 @@ button, input[type="checkbox"] {
 	margin-left: 45px;
 	display: block;
 	line-height: 1.2;
-	transition: color 0.4s;
 }
 
 .todo-list li.completed label {
@@ -89,7 +88,6 @@ button, input[type="checkbox"] {
 	font-size: 30px;
 	color: #cc9a9a;
 	margin-bottom: 11px;
-	transition: color 0.2s ease-out;
 }
 
 .todo-list li .destroy:hover {
